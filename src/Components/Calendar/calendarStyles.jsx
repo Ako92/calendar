@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const CalendarContainerTag = styled.div`
   background-color: #fff;
   border-radius: 5px;
+  max-width: 80%;
 `;
 export const WeekDaysUlTag = styled.ul`
   margin: 0;
