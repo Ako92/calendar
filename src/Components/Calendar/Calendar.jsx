@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
-import { DaysUlTag, WeekDaysUlTag, MonthDivTag, CalendarContainerTag } from "./calendarStyles";
+import {
+  DaysUlTag,
+  WeekDaysUlTag,
+  MonthDivTag,
+  CalendarContainerTag,
+} from "./calendarStyles";
 
 const Calendar = () => {
-  const [selectedDay, setSelectedDay] = useState();
+  const [selectedDay, setSelectedDay] = useState(1);
   const [selectedMonth, setSelectedMonth] = useState(+moment().format("MM"));
   const [selectedYear, setSelectedYear] = useState(+moment().format("YYYY"));
   const [daysCount] = useState(+moment().daysInMonth());
@@ -62,34 +67,30 @@ const Calendar = () => {
     setSelectedYear(selectedYear + 1);
     setSelectedMonth(1);
   };
-
-  return (
-    <CalendarContainerTag>
-      <MonthDivTag>
-        <ul>
-          <li className="prev" onClick={goToPrevMonth}>
-            &#10094;
-          </li>
-          <li className="next" onClick={goToNextMonth}>
-            &#10095;
-          </li>
-          <li>
-            <span>{moment(selectedMonth, "M").format("MMMM")}</span>&nbsp;
-            <span>{selectedYear}</span>
-          </li>
-        </ul>
-      </MonthDivTag>
-      <WeekDaysUlTag>
-        <li>Su</li>
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-      </WeekDaysUlTag>
-      <DaysUlTag>{daysToRender}</DaysUlTag>
-    </CalendarContainerTag>
-  );
+  const renderWeekdaysName = moment
+    .weekdaysShort()
+    .map((day) => <li>{day}</li>);
+  if (daysSpotsToRender) {
+    return (
+      <CalendarContainerTag>
+        <MonthDivTag>
+          <ul>
+            <li className="prev" onClick={goToPrevMonth}>
+              &#10094;
+            </li>
+            <li className="next" onClick={goToNextMonth}>
+              &#10095;
+            </li>
+            <li>
+              <span>{moment(selectedMonth, "M").format("MMMM")}</span>&nbsp;
+              <span>{selectedYear}</span>
+            </li>
+          </ul>
+        </MonthDivTag>
+        <WeekDaysUlTag>{renderWeekdaysName}</WeekDaysUlTag>
+        <DaysUlTag>{daysToRender}</DaysUlTag>
+      </CalendarContainerTag>
+    );
+  } else return <></>;
 };
 export default Calendar;

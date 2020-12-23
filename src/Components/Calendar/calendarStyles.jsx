@@ -1,17 +1,20 @@
 import styled from "styled-components";
 export const CalendarContainerTag = styled.div`
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
 export const WeekDaysUlTag = styled.ul`
   margin: 0;
   padding: 10px 0;
   background-color: #cd5853;
+
   li {
+    text-transform: uppercase;
     display: inline-block;
     width: 13.6%;
     color: #fff;
     text-align: center;
+    font-weight:bold;
   }
 `;
 
@@ -24,19 +27,18 @@ export const DaysUlTag = styled.ul`
     display: inline-block;
     width: 13.6%;
     text-align: center;
-    margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 15px;
     color: #777;
   }
   .active {
     box-sizing: border-box;
     border-radius: 4px;
-    background: #ede8e7;
-    color: white !important;
+    background: #ede8e7;    
   }
 `;
 
 export const MonthDivTag = styled.div`
+  border-radius: 5px 5px 0 0;
   padding: 10px 25px;
   width: 100%;
   background: #fff;
@@ -48,16 +50,13 @@ export const MonthDivTag = styled.div`
       color: #6f5b54;
       font-size: 20px;
       text-transform: uppercase;
-      letter-spacing: 3px;
       list-style-type: none;
     }
   }
   .prev {
     float: left;
-    padding-top: 10px;
   }
   .next {
     float: right;
-    padding-top: 10px;
   }
 `;
