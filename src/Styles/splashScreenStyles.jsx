@@ -16,5 +16,5 @@ export const H1Tag = styled.h2`
   padding-top: 30px;
 `;
 export const LogoImgTag = styled.img`
-  max-width: 30%;
+  max-width: 35%;
 `;
