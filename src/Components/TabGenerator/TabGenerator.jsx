@@ -10,7 +10,7 @@ const TabGenerator = (props) => {
         eventKey={tab.title}
         className={`tab-content ${tab.extraClassName ? tab.extraClassName : ""}`}
       >
-        {tab.Component}
+        <tab.Component/>
       </Tab>
     );
   });
