@@ -21,12 +21,9 @@ const GlobalStyles = createGlobalStyle`
       color:#d95141;
       font-size:20px;
 
-    .nav-link .active{
-      border-bottom:2px #d95141 solid;
-       
-     }
+    
     &.active{
-      border-width:0 0 2px 0 ;
+      border-width:0 0 4px 0 ;
       border-color: #d95141;
       border-style: solid;
       background-color:transparent;
