@@ -15,7 +15,7 @@ export const WeekDaysUlTag = styled.ul`
     width: 13.6%;
     color: #fff;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
   }
 `;
 
@@ -34,30 +34,6 @@ export const DaysUlTag = styled.ul`
   .active {
     box-sizing: border-box;
     border-radius: 4px;
-    background: #ede8e7;    
-  }
-`;
-
-export const MonthDivTag = styled.div`
-  border-radius: 5px 5px 0 0;
-  padding: 10px 25px;
-  width: 100%;
-  background: #fff;
-  text-align: center;
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      color: #6f5b54;
-      font-size: 20px;
-      text-transform: uppercase;
-      list-style-type: none;
-    }
-  }
-  .prev {
-    float: left;
-  }
-  .next {
-    float: right;
+    background: #ede8e7;
   }
 `;
