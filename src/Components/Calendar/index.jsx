@@ -6,8 +6,7 @@ import {
   CalendarContainerTag,
 } from "./calendarStyles";
 import CalendarHeader from "./CalendarHeader";
-const ACTIVE_CLASS_NAME = "active";
-
+import DayRenderer from "./DayRenderer";
 
 /**
  * Calendar component
@@ -55,16 +54,11 @@ const Calendar = () => {
   }, [selectedMonth, selectedYear]);
 
   const daysToRender = daysSpotsToRender?.map((item) => (
-    <li
-      className={`${item && selectedDay === item ? ACTIVE_CLASS_NAME : ""}`}
-      onClick={() => {
-        if (item) {
-          setSelectedDay(item);
-        }
-      }}
-    >
-      {item}
-    </li>
+    <DayRenderer
+      CurrentDaySpot={item}
+      SelectedDay={selectedDay}
+      SetSelectedDay={setSelectedDay}
+    />
   ));
 
   const goToPrevMonth = () => {
