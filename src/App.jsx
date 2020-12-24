@@ -1,28 +1,33 @@
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { AppContainer } from "./Styles/appStyles";
+import GlobalStyles from "./Styles/globalStyles";
+import SplashScreen from "./Screens/Splash";
+import { useEffect, useState } from "react";
+import Home from "./Screens/Home";
 
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import Calendar from './Screens/Calendar';
-import Events from './Screens/Events';
-import { AppContainer } from './Styles/appStyles';
-import GlobalStyles from './Styles/globalStyles';
-import SplashScreen from './Screens/Splash';
 function App() {
+  const [renderSplash, setRenderSplash] = useState(true);
+  useEffect(() => {
+    const AppPromise = new Promise((resolve) => {
+      /*
+       * using Promise for example to get some async data
+       * and after that render the app and remove splash screen
+      */
+      setTimeout(() => {
+        resolve();
+      }, 1500);
+    });
+    AppPromise.then(() => {
+      setRenderSplash(false);
+    });
+  }, []);
   return (
     <>
-    <GlobalStyles/>
-    <AppContainer >
-    <SplashScreen/>
-    {/* <Tabs className="tabs">
-      <Tab title="Calendar" className="tab">
-        <Calendar/>
-      </Tab>
-      <Tab title="Events" className="tab">
-        <Events/>
-      </Tab>
-    </Tabs> */}
-    </AppContainer>
+      <GlobalStyles />
+      <AppContainer>
+        {renderSplash ? <SplashScreen /> : <Home />}
+      </AppContainer>
     </>
   );
 }
