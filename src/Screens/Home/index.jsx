@@ -1,7 +1,7 @@
 import React from "react";
 import TabGenerator from "../../Components/TabGenerator/TabGenerator";
 import CalendarScreen from "../CalendarScreen";
-import Events from "../Events";
+import Events from "../EventsScreen";
 const CALENDAR_TITLE = "Calendar";
 const EVENTS_TITLE = "Events";
 const Home = () => {
