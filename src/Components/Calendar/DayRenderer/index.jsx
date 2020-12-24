@@ -10,14 +10,16 @@ const ACTIVE_CLASS_NAME = "active";
  * @component
  * @example
  * return (
- *   <DayRenderer 
+ *   <DayRenderer
  *    CurrentDaySpot={item}
  *    SelectedDay={selectedDay}
- *    SetSelectedDay={setSelectedDay}/>
+ *    SetSelectedDay={setSelectedDay}
+ *    SetShowModal={setShowModal}
+ *  />
  * )
  */
 const DayRenderer = (props) => {
-  const { CurrentDaySpot, SelectedDay, SetSelectedDay } = props;
+  const { CurrentDaySpot, SelectedDay, SetSelectedDay, SetIsOpenModal } = props;
   return (
     <li
       className={`${
@@ -28,6 +30,7 @@ const DayRenderer = (props) => {
       onClick={() => {
         if (CurrentDaySpot) {
           SetSelectedDay(CurrentDaySpot);
+          SetIsOpenModal(true);
         }
       }}
     >
@@ -37,12 +40,12 @@ const DayRenderer = (props) => {
 };
 export default DayRenderer;
 DayRenderer.propTypes = {
-    /**
-     * Current day to render
-     */
+  /**
+   * Current day to render
+   */
   CurrentDaySpot: PropTypes.number.isRequired,
   /**
-   * User Selected Day 
+   * User Selected Day
    * this will use to compare with rendering item,
    * to do the preferred logic base on it.
    */
@@ -51,4 +54,8 @@ DayRenderer.propTypes = {
    * on click of any day in Calendar we should select it
    */
   SetSelectedDay: PropTypes.func.isRequired,
+  /**
+   * this will call on click of any day
+   */
+  SetIsOpenModal: PropTypes.func.isRequired,
 };
