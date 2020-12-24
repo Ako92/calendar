@@ -16,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
   .tabs{
+    padding: 10px 0 0;
+    height: 60px;
     background-color:#fff;
     .nav-item{ 
       color:#d95141;
@@ -32,15 +34,12 @@ const GlobalStyles = createGlobalStyle`
      &:hover{
        border-left: unset;
        border-right: unset;
+       border-top: unset;
      }
      }
-     }
-   
- }
-  
+  }
+  .tab-content{
+    height: calc(100% - 60px);
+  }
 `;
 export default GlobalStyles;
-
-export const RowTag = styled.div`
-  /* width: auto; */
-`;
