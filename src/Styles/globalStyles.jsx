@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+export const OCEAN_BLUE_COLOR = "#00aeef";
+export const LIGHT_GRAY_COLOR = "#a3a3a3";
+
 const GlobalStyles = createGlobalStyle`
   html{
     height: 100%;
@@ -41,8 +44,11 @@ const GlobalStyles = createGlobalStyle`
   .tab-content{
     height: calc(100% - 60px);
   }
+  .modal-header, .modal-footer{
+    border: none;
+  }
+  .modal-title{
+    color:${LIGHT_GRAY_COLOR}
+  }
 `;
 export default GlobalStyles;
-
-export const OCEAN_BLUE_COLOR = "#00aeef";
-export const LIGHT_GRAY_COLOR = "#a3a3a3"
