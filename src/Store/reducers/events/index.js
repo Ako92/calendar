@@ -1,6 +1,6 @@
 import {
+  DELETE_EVENT_SUCCESSFUL,
   EDIT_EVENT_SUCCESSFUL,
-  SAVE_EVENT_ERROR,
   SAVE_EVENT_SUCCESSFUL,
 } from "./constants";
 
@@ -19,12 +19,6 @@ export const eventsReducer = (state = initState, action) => {
         events: [...state.events, action.payload],
       };
     }
-    case SAVE_EVENT_ERROR: {
-      return {
-        ...state,
-        hasError: true,
-      };
-    }
 
     case EDIT_EVENT_SUCCESSFUL: {
       /**
@@ -34,6 +28,19 @@ export const eventsReducer = (state = initState, action) => {
         ...state.events.slice(0, action.payload.index),
         action.payload.event,
         ...state.events.slice(action.payload.index + 1),
+      ];
+      return {
+        ...state,
+        events: tempEvents,
+      };
+    }
+    case DELETE_EVENT_SUCCESSFUL: {
+      /**
+       * find data by index and delete in redux state
+       */
+      const tempEvents = [
+        ...state.events.slice(0, action.payload),
+        ...state.events.slice(action.payload + 1),
       ];
       return {
         ...state,
