@@ -9,4 +9,5 @@ export const ButtonTag = styled.button`
   margin: 10px;
   padding: 10px;
   border: 1px solid ${OCEAN_BLUE_COLOR};
+  width:49%;
 `;
