@@ -1,27 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { TextAreaTag } from "./textAreaStyles";
-
+import { InputTag } from "./inputStyles";
 /**
- * Text Area component
+ * Simple Input component
  *
  * @component
  * @example
  *
  * return (
- *   <TextArea  Placeholder= ""
+ *   <Input  Placeholder= ""
  *       OnChange={ () => {}}
  *       OnBlur{ () => {}} />
  * )
  */
-const TextArea = (props) => {
+const Input = (props) => {
   const { Placeholder, OnChange, OnBlur } = props;
   return (
-    <TextAreaTag placeholder={Placeholder} onChange={OnChange} onBlur={OnBlur} />
+    <InputTag placeholder={Placeholder} onChange={OnChange} onBlur={OnBlur} />
   );
 };
-export default TextArea;
-TextArea.propTypes = {
+export default Input;
+Input.propTypes = {
   /** placeholder inside text input */
   Placeholder: PropTypes.string.isRequired,
   /** onChange handler of input */
@@ -29,7 +28,7 @@ TextArea.propTypes = {
   /** onBlur handler of input */
   OnBlur: PropTypes.func,
 };
-TextArea.defaultProps = {
+Input.defaultProps = {
   Placeholder: "",
   OnChange: () => {},
   OnBlur: () => {},
