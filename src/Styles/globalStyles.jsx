@@ -43,3 +43,6 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 export default GlobalStyles;
+
+export const OCEAN_BLUE_COLOR = "#00aeef";
+export const LIGHT_GRAY_COLOR = "#a3a3a3"
