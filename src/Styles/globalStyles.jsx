@@ -50,5 +50,8 @@ const GlobalStyles = createGlobalStyle`
   .modal-title{
     color:${LIGHT_GRAY_COLOR}
   }
+  .modal-content{
+    height:80vh;
+  }
 `;
 export default GlobalStyles;
