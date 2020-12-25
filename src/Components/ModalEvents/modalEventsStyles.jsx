@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { LIGHT_GRAY_COLOR } from "../../Styles/globalStyles";
 
-export const AddCharacterButtonTag = styled.button`
+export const AddButtonTag = styled.button`
   font-size: 120px;
   padding: 0px 50px;
   border: 2px solid ${LIGHT_GRAY_COLOR};
