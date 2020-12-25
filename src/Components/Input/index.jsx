@@ -14,9 +14,14 @@ import { InputTag } from "./inputStyles";
  * )
  */
 const Input = (props) => {
-  const { Placeholder, OnChange, OnBlur } = props;
+  const { Placeholder, OnChange, OnBlur, DefaultValue } = props;
   return (
-    <InputTag placeholder={Placeholder} onChange={OnChange} onBlur={OnBlur} />
+    <InputTag
+      placeholder={Placeholder}
+      onChange={OnChange}
+      onBlur={OnBlur}
+      defaultValue={DefaultValue}
+    />
   );
 };
 export default Input;
@@ -27,9 +32,12 @@ Input.propTypes = {
   OnChange: PropTypes.func,
   /** onBlur handler of input */
   OnBlur: PropTypes.func,
+  /** value in case of need for instance init value */
+  Value: PropTypes.string,
 };
 Input.defaultProps = {
   Placeholder: "",
   OnChange: () => {},
   OnBlur: () => {},
+  DefaultValue: "",
 };

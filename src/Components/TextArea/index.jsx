@@ -15,9 +15,14 @@ import { TextAreaTag } from "./textAreaStyles";
  * )
  */
 const TextArea = (props) => {
-  const { Placeholder, OnChange, OnBlur } = props;
+  const { Placeholder, OnChange, OnBlur, DefaultValue } = props;
   return (
-    <TextAreaTag placeholder={Placeholder} onChange={OnChange} onBlur={OnBlur} />
+    <TextAreaTag
+      placeholder={Placeholder}
+      onChange={OnChange}
+      onBlur={OnBlur}
+      defaultValue={DefaultValue}
+    />
   );
 };
 export default TextArea;
@@ -28,9 +33,14 @@ TextArea.propTypes = {
   OnChange: PropTypes.func,
   /** onBlur handler of input */
   OnBlur: PropTypes.func,
+  /**
+   * default value of text area. if needed
+   */
+  DefaultValue: PropTypes.string,
 };
 TextArea.defaultProps = {
   Placeholder: "",
   OnChange: () => {},
   OnBlur: () => {},
+  DefaultValue: "",
 };
