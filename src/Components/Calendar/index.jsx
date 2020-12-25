@@ -7,6 +7,8 @@ import {
 } from "./calendarStyles";
 import CalendarHeader from "./CalendarHeader";
 import DayRenderer from "./DayRenderer";
+import ModalRenderer from "../Modal";
+import ModalEvents from "../ModalEvents";
 
 /**
  * Calendar component
@@ -24,6 +26,7 @@ const Calendar = () => {
   const [selectedMonth, setSelectedMonth] = useState(+moment().format("MM"));
   const [selectedYear, setSelectedYear] = useState(+moment().format("YYYY"));
   const [daysSpotsToRender, setDaysSpotsToRender] = useState();
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   useEffect(() => {
     setDaysSpotsToRender(
@@ -58,6 +61,7 @@ const Calendar = () => {
       CurrentDaySpot={item}
       SelectedDay={selectedDay}
       SetSelectedDay={setSelectedDay}
+      SetIsOpenModal={setIsOpenModal}
     />
   ));
 
@@ -88,6 +92,12 @@ const Calendar = () => {
   const renderWeekdaysName = moment
     .weekdaysShort()
     .map((day) => <li>{day}</li>);
+
+  const CalendarModalContent = (
+    <ModalEvents
+      CurrentDate={new Date(selectedYear, selectedMonth - 1, selectedDay)}
+    />
+  );
   if (daysSpotsToRender) {
     return (
       <CalendarContainerTag>
@@ -99,6 +109,14 @@ const Calendar = () => {
         />
         <WeekDaysUlTag>{renderWeekdaysName}</WeekDaysUlTag>
         <DaysUlTag>{daysToRender}</DaysUlTag>
+        <ModalRenderer
+          ModalProps={{
+            Title: "Events",
+            Content: CalendarModalContent,
+          }}
+          IsOpenModal={isOpenModal}
+          SetIsOpenModal={setIsOpenModal}
+        />
       </CalendarContainerTag>
     );
     /** Maybe we should handle some loading handler here to prevent flash on first render of component. */
