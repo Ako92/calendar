@@ -9,9 +9,15 @@ import Button from "../../Components/Button";
  *
  * @component
  * @example
- * No Props needed
+ * 
+ *  const InitialValues={
+    currentDate: new Date(),
+    time: '10 am',
+    title: "Daily meeting",
+    description: "Don't Forget to mention yu works",
+  }
  * return (
- *   <AddEventScreen OnSubmit={()=>{// submit logic should go here}} OnCancel={()=>{// to cancel to event.}}/>
+ *   <AddEventScreen InitialValues={InitialValues} OnSubmit={()=>{// submit logic should go here}} OnCancel={()=>{// to cancel to event.}}/>
  * )
  */
 
