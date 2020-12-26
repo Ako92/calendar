@@ -26,7 +26,10 @@ export const eventsReducer = (state = initState, action) => {
        */
       const tempEvents = [
         ...state.events.slice(0, action.payload.index),
-        action.payload.event,
+        {
+          ...action.payload.event,
+          currentDate: state.events[action.payload.index].currentDate,
+        },
         ...state.events.slice(action.payload.index + 1),
       ];
       return {
