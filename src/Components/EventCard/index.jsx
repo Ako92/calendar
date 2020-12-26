@@ -7,23 +7,24 @@ import {
   ButtonsContainerTag,
   EventCardImgTag,
 } from "./eventCardStyles";
+
 /**
  * Event Card
- * Dumb component
  * This will use to render cards in event lists.
- *
+ * Dumb Component
  * @component
  * @example
  *
  * return (
- *   <EventCard 
- *      Title="Example Title" 
+ *   <EventCard
+ *      Title="Example Title"
  *      OnEdit={()=> handler of edit in card }
  *      OnDelete{()=> handler of delete in card } />
  * )
  */
 const EventCard = (props) => {
   const { Title, OnEdit, OnDelete } = props;
+
   return (
     <EventCardContainerTag>
       <EventCardTitleTag>{Title}</EventCardTitleTag>

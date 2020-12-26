@@ -6,7 +6,7 @@ export const EventCardContainerTag = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid ${LIGHT_GRAY_COLOR};
-  padding-bottom:15px;
+  padding-bottom: 15px;
 `;
 
 export const EventCardTitleTag = styled.span`
@@ -24,4 +24,8 @@ export const EventCardButtonTag = styled.button`
 
 export const EventCardImgTag = styled.img`
   height: 25px;
+`;
+
+export const DeleteEventImgTag = styled.img`
+  padding-bottom: 10px;
 `;
