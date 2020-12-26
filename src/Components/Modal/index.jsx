@@ -15,16 +15,17 @@ const ModalRenderer = (props) => {
       </Modal.Header>
 
       <Modal.Body> {ModalProps.Content} </Modal.Body>
-
-      <Modal.Footer>
-        {ModalProps?.Footer?.map((item) => (
-          <Button
-            Action={item?.action}
-            Variant={item?.variant}
-            Text={item?.text}
-          />
-        ))}
-      </Modal.Footer>
+      {ModalProps?.Footer && (
+        <Modal.Footer>
+          {ModalProps?.Footer?.map((item) => (
+            <Button
+              Action={item?.action}
+              Variant={item?.variant}
+              Text={item?.text}
+            />
+          ))}
+        </Modal.Footer>
+      )}
     </Modal>
   );
 };
