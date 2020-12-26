@@ -18,9 +18,9 @@ export const editEventByID = (event) => {
   };
 };
 
-export const deleteEvent = (index) => {
+export const deleteEventByID = (ID) => {
   return {
     type: DELETE_EVENT_SUCCESSFUL,
-    payload: index,
+    payload: ID,
   };
 };

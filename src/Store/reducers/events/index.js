@@ -44,9 +44,12 @@ export const eventsReducer = (state = initState, action) => {
       /**
        * find data by index and delete in redux state
        */
+      const eventIndex = state.events.findIndex(
+        (item) => item.id === action.payload
+      );
       const tempEvents = [
-        ...state.events.slice(0, action.payload),
-        ...state.events.slice(action.payload + 1),
+        ...state.events.slice(0, eventIndex),
+        ...state.events.slice(eventIndex + 1),
       ];
       return {
         ...state,
