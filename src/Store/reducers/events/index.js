@@ -24,13 +24,16 @@ export const eventsReducer = (state = initState, action) => {
       /**
        * find data by index and replace it with new object sent from component
        */
+      const eventIndex = state.events.findIndex(
+        (item) => item.id === action.payload.event.id
+      );
       const tempEvents = [
-        ...state.events.slice(0, action.payload.index),
+        ...state.events.slice(0, eventIndex),
         {
           ...action.payload.event,
-          currentDate: state.events[action.payload.index].currentDate,
+          currentDate: state.events[eventIndex].currentDate,
         },
-        ...state.events.slice(action.payload.index + 1),
+        ...state.events.slice(eventIndex + 1),
       ];
       return {
         ...state,

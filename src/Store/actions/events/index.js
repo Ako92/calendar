@@ -11,7 +11,7 @@ export const addEvent = (event) => {
   };
 };
 
-export const editEventByIndex = (event) => {
+export const editEventByID = (event) => {
   return {
     type: EDIT_EVENT_SUCCESSFUL,
     payload: event,
