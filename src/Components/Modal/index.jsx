@@ -4,12 +4,10 @@ import { Modal } from "react-bootstrap";
 import Button from "../Button";
 
 const ModalRenderer = (props) => {
-  const { IsOpenModal, SetIsOpenModal, ModalProps } = props;
-  const handleClose = () => {
-    SetIsOpenModal(false);
-  };
+  const { IsOpenModal, HandleCloseModal, ModalProps } = props;
+  
   return (
-    <Modal show={IsOpenModal} onHide={handleClose} centered>
+    <Modal show={IsOpenModal} onHide={HandleCloseModal} centered>
       <Modal.Header closeButton>
         <Modal.Title>{ModalProps?.Title}</Modal.Title>
       </Modal.Header>

@@ -115,7 +115,7 @@ const Calendar = () => {
             Content: CalendarModalContent,
           }}
           IsOpenModal={isOpenModal}
-          SetIsOpenModal={setIsOpenModal}
+          HandleCloseModal={() => setIsOpenModal(false)}
         />
       </CalendarContainerTag>
     );
