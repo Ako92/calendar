@@ -50,7 +50,12 @@ const ModalEvents = (props) => {
      * on add submit
      */
 
-    dispatch(addEvent({ currentDate: CurrentDate, time, title, description }));
+    /** to make a unique id */
+    const uniqueId = Date.now();
+
+    dispatch(
+      addEvent({ currentDate: CurrentDate, time, title, description, id: uniqueId })
+    );
     return setAddNewEvent(false);
   };
 
