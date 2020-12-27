@@ -8,22 +8,9 @@ import {
   TitleContainerTag,
   TodayTitleTag,
 } from "./eventMappersStyles";
+import { sortDateComparator } from "../../Functions/sortDate";
+import { sameDay } from "../../Functions/sameDay";
 const IS_TODAY = "isToday";
-function sortDate(a, b) {
-  var dateA = a.currentDate.getTime();
-  var dateB = b.currentDate.getTime();
-  return dateA < dateB ? 1 : -1;
-}
-
-function sameDay(d1, d2) {
-    /** date comparator */
-  return (
-    d1.getFullYear() === d2.getFullYear() &&
-    d1.getMonth() === d2.getMonth() &&
-    d1.getDate() === d2.getDate()
-  );
-}
-
 
 
 /**
@@ -51,7 +38,7 @@ const CategorizedEventMapper = (props) => {
   const today = new Date();
 
   /** to sort items By date */
-  const SortedItems = ItemsToRender.sort(sortDate);
+  const SortedItems = ItemsToRender.sort(sortDateComparator);
 
   /**
    *  this gives an object with dates as keys,
