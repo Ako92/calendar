@@ -58,6 +58,11 @@ const GlobalStyles = createGlobalStyle`
   .modal-footer{
     flex-wrap:nowrap;
   }
+  .close{
+    font-weight: 400;
+    font-size:40px;
+    color:rgba(136, 136, 136, 0.8)
+  }
   textarea:focus, input:focus,button:focus{
     outline: none;
 }
