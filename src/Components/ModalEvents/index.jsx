@@ -10,6 +10,8 @@ import {
   CircularScreenDescriptionTag,
 } from "../../Styles/globalStyles";
 import EventListRenderer from "../EventListRenderer";
+import { AddNewItemContainerTag, PlusCharTag } from "./modalEventsStyles";
+const ADD_EVENT = "Add Event";
 /**
  * Modal Events
  * Will use to get this day events from reducer and render them
@@ -54,7 +56,13 @@ const ModalEvents = (props) => {
     const uniqueId = Date.now();
 
     dispatch(
-      addEvent({ currentDate: CurrentDate, time, title, description, id: uniqueId })
+      addEvent({
+        currentDate: CurrentDate,
+        time,
+        title,
+        description,
+        id: uniqueId,
+      })
     );
     return setAddNewEvent(false);
   };
@@ -93,6 +101,16 @@ const ModalEvents = (props) => {
   return (
     <>
       {pageContent}
+      {currentDayEvents && currentDayEvents[0] && (
+        <AddNewItemContainerTag
+          onClick={() => {
+            setAddNewEvent(true);
+          }}
+        >
+          <PlusCharTag />
+          {ADD_EVENT}
+        </AddNewItemContainerTag>
+      )}
       <ModalRenderer
         ModalProps={{
           Title: "Events",
