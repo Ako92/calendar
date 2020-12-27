@@ -32,11 +32,10 @@ import EventCard from "../EventCard";
 const EventDetail = (props) => {
   const now = new Date().getTime();
   const { Event, OnEdit, OnDelete } = props;
-  const splittedTime = Event.time.split(":");
-  const EventTime = Event.currentDate.setHours(
-    splittedTime[0],
-    splittedTime[1]
-  );
+  const clonedDate = new Date(Event.currentDate);
+  const eventTime = Event.time;
+  const splittedTime = eventTime.split(":");
+  const EventTime = clonedDate.setHours(splittedTime[0], splittedTime[1]);
   const distanceWithNow = EventTime - now;
   var days = Math.floor(distanceWithNow / (1000 * 60 * 60 * 24));
 
