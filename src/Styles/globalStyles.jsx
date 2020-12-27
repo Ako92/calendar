@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const OCEAN_BLUE_COLOR = "#00aeef";
 export const LIGHT_GRAY_COLOR = "#a3a3a3";
 export const BLOODY_RED_COLOR = "#d95141";
+export const TOAST_ORANGE_COLOR = "#f5a647"
 const GlobalStyles = createGlobalStyle`
   html{
     height: 100%;
