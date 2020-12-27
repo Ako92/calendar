@@ -53,6 +53,7 @@ const GlobalStyles = createGlobalStyle`
   }
   .modal-content{
     height:80vh;
+    border-radius:unset;
   }
   .modal-footer{
     flex-wrap:nowrap;
