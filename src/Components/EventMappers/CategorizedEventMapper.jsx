@@ -94,7 +94,7 @@ const CategorizedEventMapper = (props) => {
 
   return (
     <CategorizedEventMapperContainerTag>
-      {ArrayToRender ? ArrayToRender : <span>No Events Added Yet!</span>}
+      {ArrayToRender}
     </CategorizedEventMapperContainerTag>
   );
 };
