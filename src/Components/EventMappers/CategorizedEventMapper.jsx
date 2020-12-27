@@ -29,11 +29,12 @@ const IS_TODAY = "isToday";
  *      }]}
  *      OnEdit={()=> // on edit function}
  *      OnDelete={()=> // on edit function}
+ *      OnEventClick{()=> // on event click function}
  *  />
  * )
  */
 const CategorizedEventMapper = (props) => {
-  const { ItemsToRender, OnEdit, OnDelete } = props;
+  const { ItemsToRender, OnEdit, OnDelete, OnEventClick } = props;
   const today = new Date();
 
   /** to sort items By date */
@@ -75,6 +76,9 @@ const CategorizedEventMapper = (props) => {
     groups[key]?.events.forEach((event, index) => {
       ArrayToRender.push(
         <EventCard
+          OnClick={() => {
+            OnEventClick(event);
+          }}
           key={event.currentDate + index}
           Title={event.title}
           OnEdit={() => {
@@ -109,4 +113,6 @@ CategorizedEventMapper.propTypes = {
   OnEdit: PropTypes.func.isRequired,
   /** on delete button clicked */
   OnDelete: PropTypes.func.isRequired,
+  /** on event click handler */
+  OnEventClick: PropTypes.func.isRequired,
 };

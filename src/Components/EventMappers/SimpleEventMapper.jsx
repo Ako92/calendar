@@ -19,15 +19,19 @@ import PropTypes from "prop-types";
  *      }]}
  *      OnEdit={()=> // on edit function}
  *      OnDelete={()=> // on edit function}
+ *      OnEventClick{()=> // on event click function}
  * />
  * )
  */
 const SimpleEventMapper = (props) => {
-  const { ItemsToRender, OnEdit, OnDelete } = props;
+  const { ItemsToRender, OnEdit, OnDelete, OnEventClick } = props;
 
-  const Items = ItemsToRender?.map((event,index) => {
+  const Items = ItemsToRender?.map((event, index) => {
     return (
       <EventCard
+        OnClick={() => {
+          OnEventClick(event);
+        }}
         key={event.currentDate + index}
         Title={event.title}
         OnEdit={() => {
