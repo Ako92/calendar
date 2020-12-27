@@ -28,6 +28,7 @@ const SimpleEventMapper = (props) => {
   const Items = ItemsToRender?.map((event) => {
     return (
       <EventCard
+        key={event.currentDate + event.title}
         Title={event.title}
         OnEdit={() => {
           OnEdit(event);
@@ -43,6 +44,7 @@ const SimpleEventMapper = (props) => {
 };
 export default SimpleEventMapper;
 SimpleEventMapper.propTypes = {
+  /** Array of event items to render */
   ItemsToRender: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,
@@ -51,6 +53,8 @@ SimpleEventMapper.propTypes = {
       title: PropTypes.string,
     })
   ).isRequired,
+  /** on edit button clicked */
   OnEdit: PropTypes.func.isRequired,
+  /** on delete button clicked */
   OnDelete: PropTypes.func.isRequired,
 };
