@@ -130,7 +130,6 @@ const EventListRenderer = (props) => {
     setIsOpenModal(true);
     setEventIDToDelete(id);
   };
-  console.log("ItemsToRender",ItemsToRender)
   return (
     <>
       {IsCategorizedByDate ? (
