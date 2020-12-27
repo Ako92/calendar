@@ -12,14 +12,13 @@ import { sortDateComparator } from "../../Functions/sortDate";
 import { sameDay } from "../../Functions/sameDay";
 const IS_TODAY = "isToday";
 
-
 /**
  * To Render events in Events tab
  * this component will sort and categorize events by date
  *
  * @component
  * @example
- * 
+ *
  * return (
  *   <CategorizedEventMapper
  *      ItemsToRender={[{
@@ -50,7 +49,7 @@ const CategorizedEventMapper = (props) => {
       groups[date] = {};
       groups[date].events = [];
       if (sameDay(today, event.currentDate)) {
-          /** if event date is current day this flag will set to true to render Red Todays Events tag */
+        /** if event date is current day this flag will set to true to render Red Todays Events tag */
         groups[date][IS_TODAY] = true;
       }
     }
@@ -59,24 +58,24 @@ const CategorizedEventMapper = (props) => {
   }, {});
 
   const ArrayToRender = [];
-  Object.keys(groups).forEach((key) => {
+  Object.keys(groups).forEach((key, index) => {
     if (groups[key][IS_TODAY]) {
       ArrayToRender.push(
-        <TitleContainerTag>
-          <TodayTitleTag key={key}>Today Events</TodayTitleTag>
+        <TitleContainerTag key={"Today_Events"}>
+          <TodayTitleTag>Today Events</TodayTitleTag>
         </TitleContainerTag>
       );
     } else {
       ArrayToRender.push(
-        <TitleContainerTag>
-          <DateTitleTag key={key}>{key}</DateTitleTag>
+        <TitleContainerTag key={key.toString() + index}>
+          <DateTitleTag>{key}</DateTitleTag>
         </TitleContainerTag>
       );
     }
-    groups[key]?.events.forEach((event) => {
+    groups[key]?.events.forEach((event, index) => {
       ArrayToRender.push(
         <EventCard
-          key={event.currentDate + event.title}
+          key={event.currentDate + index}
           Title={event.title}
           OnEdit={() => {
             OnEdit(event);
@@ -91,13 +90,13 @@ const CategorizedEventMapper = (props) => {
 
   return (
     <CategorizedEventMapperContainerTag>
-      {ArrayToRender}
+      {ArrayToRender ? ArrayToRender : <span>No Events Added Yet!</span>}
     </CategorizedEventMapperContainerTag>
   );
 };
 export default CategorizedEventMapper;
 CategorizedEventMapper.propTypes = {
-    /** Array of event items to render */
+  /** Array of event items to render */
   ItemsToRender: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,

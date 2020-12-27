@@ -56,9 +56,10 @@ const Calendar = () => {
     );
   }, [selectedMonth, selectedYear]);
 
-  const daysToRender = daysSpotsToRender?.map((item) => (
+  const daysToRender = daysSpotsToRender?.map((item, index) => (
     <DayRenderer
-      CurrentDaySpot={item}
+      key={item.toString() + index.toString()}
+      CurrentDaySpot={+item}
       SelectedDay={selectedDay}
       SetSelectedDay={setSelectedDay}
       SetIsOpenModal={setIsOpenModal}
@@ -91,7 +92,7 @@ const Calendar = () => {
 
   const renderWeekdaysName = moment
     .weekdaysShort()
-    .map((day) => <li>{day}</li>);
+    .map((day) => <li key={day}>{day}</li>);
 
   const CalendarModalContent = (
     <ModalEvents

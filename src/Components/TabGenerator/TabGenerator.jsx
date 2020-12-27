@@ -6,11 +6,14 @@ const TabGenerator = (props) => {
   const TabData = TabsContent.map((tab) => {
     return (
       <Tab
+        key={tab.title}
         title={tab.title}
         eventKey={tab.title}
-        className={`tab-content ${tab.extraClassName ? tab.extraClassName : ""}`}
+        className={`tab-content ${
+          tab.extraClassName ? tab.extraClassName : ""
+        }`}
       >
-        <tab.Component/>
+        <tab.Component />
       </Tab>
     );
   });
@@ -22,7 +25,7 @@ TabGenerator.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       extraClassName: PropTypes.string,
-      Component: PropTypes.element,
+      Component: PropTypes.func,
     })
   ).isRequired,
 };

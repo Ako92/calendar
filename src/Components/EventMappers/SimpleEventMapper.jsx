@@ -25,10 +25,10 @@ import PropTypes from "prop-types";
 const SimpleEventMapper = (props) => {
   const { ItemsToRender, OnEdit, OnDelete } = props;
 
-  const Items = ItemsToRender?.map((event) => {
+  const Items = ItemsToRender?.map((event,index) => {
     return (
       <EventCard
-        key={event.currentDate + event.title}
+        key={event.currentDate + index}
         Title={event.title}
         OnEdit={() => {
           OnEdit(event);

@@ -30,7 +30,7 @@ const ModalRenderer = (props) => {
 export default ModalRenderer;
 ModalRenderer.propTypes = {
   IsOpenModal: PropTypes.bool.isRequired,
-  SetOpenModal: PropTypes.func.isRequired,
+  HandleCloseModal: PropTypes.func.isRequired,
   ModalProps: PropTypes.shape({
     Title: PropTypes.string,
     Content: PropTypes.element,
