@@ -23,10 +23,13 @@ import {
  * )
  */
 const EventCard = (props) => {
-  const { Title, OnEdit, OnDelete, OnClick } = props;
+  const { Title, OnEdit, OnDelete, OnClick, HasBorderBottom } = props;
 
   return (
-    <EventCardContainerTag onClick={OnClick}>
+    <EventCardContainerTag
+      hasBorderBottom={HasBorderBottom}
+      onClick={() => OnClick?.()}
+    >
       <EventCardTitleTag>{Title}</EventCardTitleTag>
       <ButtonsContainerTag>
         <EventCardButtonTag onClick={OnEdit}>
@@ -44,7 +47,7 @@ EventCard.propTypes = {
   /**
    * This handles click on card it self.
    */
-  OnClick: PropTypes.string.isRequired,
+  OnClick: PropTypes.string,
   /**
    *  title of event card
    */
@@ -57,4 +60,9 @@ EventCard.propTypes = {
    *  on delete button clicked handler function
    */
   OnDelete: PropTypes.func.isRequired,
+  /** to removed border bottom of card you can pass this value false */
+  HasBorderBottom: PropTypes.bool.isRequired,
+};
+EventCard.defaultProps = {
+  HasBorderBottom: true,
 };

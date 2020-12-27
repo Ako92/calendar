@@ -6,7 +6,8 @@ export const EventCardContainerTag = styled.div`
   justify-content: space-between;
   align-items: center;
   /* converted to rgba to apply opacity in this border, this is the rgba code of our current light gray */
-  border-bottom: 3px solid rgba(163, 163, 163, 0.5);
+  border-bottom: ${(props) =>
+    props.hasBorderBottom ? "3px solid rgba(163, 163, 163, 0.5)" : ""};
   padding-bottom: 15px;
   margin-bottom: 15px;
 `;
