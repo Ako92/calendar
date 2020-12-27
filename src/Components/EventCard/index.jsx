@@ -23,10 +23,10 @@ import {
  * )
  */
 const EventCard = (props) => {
-  const { Title, OnEdit, OnDelete } = props;
+  const { Title, OnEdit, OnDelete, OnClick } = props;
 
   return (
-    <EventCardContainerTag>
+    <EventCardContainerTag onClick={OnClick}>
       <EventCardTitleTag>{Title}</EventCardTitleTag>
       <ButtonsContainerTag>
         <EventCardButtonTag onClick={OnEdit}>
@@ -41,6 +41,10 @@ const EventCard = (props) => {
 };
 export default EventCard;
 EventCard.propTypes = {
+  /**
+   * This handles click on card it self.
+   */
+  OnClick: PropTypes.string.isRequired,
   /**
    *  title of event card
    */
