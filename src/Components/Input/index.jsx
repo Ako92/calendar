@@ -14,9 +14,10 @@ import { InputTag } from "./inputStyles";
  * )
  */
 const Input = (props) => {
-  const { Placeholder, OnChange, OnBlur, DefaultValue } = props;
+  const { Placeholder, OnChange, OnBlur, DefaultValue, Type } = props;
   return (
     <InputTag
+      type={Type}
       placeholder={Placeholder}
       onChange={OnChange}
       onBlur={OnBlur}
@@ -34,10 +35,13 @@ Input.propTypes = {
   OnBlur: PropTypes.func,
   /** value in case of need for instance init value */
   Value: PropTypes.string,
+  /** type of input default is text*/
+  Type: PropTypes.string,
 };
 Input.defaultProps = {
   Placeholder: "",
   OnChange: () => {},
   OnBlur: () => {},
   DefaultValue: "",
+  type: "text",
 };
