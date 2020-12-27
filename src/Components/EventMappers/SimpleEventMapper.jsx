@@ -61,4 +61,6 @@ SimpleEventMapper.propTypes = {
   OnEdit: PropTypes.func.isRequired,
   /** on delete button clicked */
   OnDelete: PropTypes.func.isRequired,
+  /** on event click handler */
+  OnEventClick:PropTypes.func.isRequired
 };
