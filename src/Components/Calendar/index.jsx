@@ -60,7 +60,7 @@ const Calendar = () => {
     <DayRenderer
       key={item.toString() + index.toString()}
       CurrentDaySpot={item.toString()}
-      SelectedDay={selectedDay}
+      SelectedDay={selectedDay.toString()}
       SetSelectedDay={setSelectedDay}
       SetIsOpenModal={setIsOpenModal}
     />

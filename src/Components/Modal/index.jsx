@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const ModalRenderer = (props) => {
   const { IsOpenModal, HandleCloseModal, ModalProps } = props;
-  
+
   return (
     <Modal show={IsOpenModal} onHide={HandleCloseModal} centered>
       <Modal.Header closeButton>
@@ -17,6 +17,7 @@ const ModalRenderer = (props) => {
         <Modal.Footer>
           {ModalProps?.Footer?.map((item) => (
             <Button
+              key={item.text}
               Action={item?.action}
               Variant={item?.variant}
               Text={item?.text}

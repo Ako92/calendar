@@ -49,7 +49,7 @@ DayRenderer.propTypes = {
    * this will use to compare with rendering item,
    * to do the preferred logic base on it.
    */
-  SelectedDay: PropTypes.number.isRequired,
+  SelectedDay: PropTypes.string.isRequired,
   /**
    * on click of any day in Calendar we should select it
    */
