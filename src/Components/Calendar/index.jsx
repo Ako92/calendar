@@ -59,7 +59,7 @@ const Calendar = () => {
   const daysToRender = daysSpotsToRender?.map((item, index) => (
     <DayRenderer
       key={item.toString() + index.toString()}
-      CurrentDaySpot={+item}
+      CurrentDaySpot={item.toString()}
       SelectedDay={selectedDay}
       SetSelectedDay={setSelectedDay}
       SetIsOpenModal={setIsOpenModal}

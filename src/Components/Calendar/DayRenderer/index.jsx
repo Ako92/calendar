@@ -43,7 +43,7 @@ DayRenderer.propTypes = {
   /**
    * Current day to render
    */
-  CurrentDaySpot: PropTypes.number.isRequired,
+  CurrentDaySpot: PropTypes.string.isRequired,
   /**
    * User Selected Day
    * this will use to compare with rendering item,
