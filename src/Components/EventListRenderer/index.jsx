@@ -104,12 +104,14 @@ const EventListRenderer = (props) => {
             action: () => {
               dispatch(deleteEventByID(eventIDToDelete));
               setIsOpenModal(false);
+              setEventIDToDelete(null);
             },
           },
           {
             variant: "white",
             text: "Cancel",
             action: () => {
+              setEventIDToDelete(null);
               setIsOpenModal(false);
             },
           },
