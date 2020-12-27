@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const OCEAN_BLUE_COLOR = "#00aeef";
 export const LIGHT_GRAY_COLOR = "#a3a3a3";
-
+export const BLOODY_RED_COLOR = "#d95141";
 const GlobalStyles = createGlobalStyle`
   html{
     height: 100%;
@@ -23,16 +23,16 @@ const GlobalStyles = createGlobalStyle`
     height: 60px;
     background-color:#fff;
     .nav-item{ 
-      color:#d95141;
+      color: ${BLOODY_RED_COLOR};
       font-size:20px;
 
     
     &.active{
       border-width:0 0 4px 0 ;
-      border-color: #d95141;
+      border-color: ${BLOODY_RED_COLOR};
       border-style: solid;
       background-color:transparent;
-      color:#d95141;
+      color:${BLOODY_RED_COLOR};
      }
      &:hover{
        border-left: unset;
@@ -59,11 +59,9 @@ const GlobalStyles = createGlobalStyle`
 `;
 export default GlobalStyles;
 
-
-
 export const CircularButtonTag = styled.button`
   font-size: 120px;
-  padding: ${props => props.TallContent?"0px 70px":"0px 50px"};
+  padding: ${(props) => (props.TallContent ? "0px 70px" : "0px 50px")};
   border: 2px solid ${LIGHT_GRAY_COLOR};
   border-radius: 50%;
   color: ${LIGHT_GRAY_COLOR};
