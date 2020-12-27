@@ -12,7 +12,7 @@ export const PlusCharTag = styled.span`
   border: 1px solid ${OCEAN_BLUE_COLOR};
   border-radius: 50%;
   padding: 0 5px;
-  margin-right: 2px;
+  margin-right: 5px;
   ::after {
     content: "+";
   }

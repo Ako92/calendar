@@ -92,7 +92,7 @@ const ModalEvents = (props) => {
           >
             +
           </CircularButtonTag>
-          <CircularScreenDescriptionTag>Add Event</CircularScreenDescriptionTag>
+          <CircularScreenDescriptionTag>{ADD_EVENT}</CircularScreenDescriptionTag>
         </CircularScreenContainerTag>
       );
     }
@@ -113,7 +113,7 @@ const ModalEvents = (props) => {
       )}
       <ModalRenderer
         ModalProps={{
-          Title: "Events",
+          Title: ADD_EVENT,
           Content: AddEventModalContent,
         }}
         IsOpenModal={addNewEvent}
