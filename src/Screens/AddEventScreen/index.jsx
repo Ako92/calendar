@@ -29,6 +29,7 @@ const AddEventScreen = (props) => {
   return (
     <AddEventContainerTag>
       <Input
+        Type="time"
         Placeholder="Time"
         OnBlur={(event) => {
           setTime(event?.target?.value);
