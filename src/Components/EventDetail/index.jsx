@@ -37,12 +37,14 @@ const EventDetail = (props) => {
   const splittedTime = eventTime.split(":");
   const EventTime = clonedDate.setHours(splittedTime[0], splittedTime[1]);
   const distanceWithNow = EventTime - now;
-  var days = Math.floor(distanceWithNow / (1000 * 60 * 60 * 24));
-
-  var hours = Math.floor(
+  /** calculate remaining days, hours and minutes  */
+  const days = Math.floor(distanceWithNow / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
     (distanceWithNow % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   );
-  var minutes = Math.floor((distanceWithNow % (1000 * 60 * 60)) / (1000 * 60));
+  const minutes = Math.floor(
+    (distanceWithNow % (1000 * 60 * 60)) / (1000 * 60)
+  );
   return (
     <EventDetailContainerTag>
       <RemainingTimeTagContainerTag>
