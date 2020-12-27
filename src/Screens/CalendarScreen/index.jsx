@@ -1,5 +1,6 @@
 import React from "react";
 import Calendar from "../../Components/Calendar";
+import Toast from "../../Components/Toast";
 
 import {
   CalendarTitleTag,
@@ -15,6 +16,7 @@ const CalendarScreen = () => {
         <CalendarTitleTag>{PICK_A_DAY}</CalendarTitleTag>
         <Calendar />
       </CalendarRowTag>
+      <Toast />
     </CalendarContainerTag>
   );
 };
