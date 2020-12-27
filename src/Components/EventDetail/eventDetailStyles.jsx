@@ -26,5 +26,6 @@ export const DescriptionPTag = styled.p`
   font-size: 20px;
   word-wrap: break-word;
   width: 100%;
-  height:100px;
+  height: 100px;
+  color: #7c7c7c;
 `;
