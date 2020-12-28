@@ -7,7 +7,6 @@ export const ButtonTag = styled.button`
   color: ${(props) => (props?.Variant === "blue" ? "#fff" : OCEAN_BLUE_COLOR)};
   font-size: 2rem;
   margin: 10px;
-  padding: 10px;
   border: 2px solid ${OCEAN_BLUE_COLOR};
   width:49%;
 `;
