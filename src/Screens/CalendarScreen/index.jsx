@@ -8,7 +8,16 @@ import {
   CalendarRowTag,
 } from "./calendarScreenStyles";
 const PICK_A_DAY = "Pick a day";
-
+/**
+ * Component to render calendar tab content
+ * @component
+ * @example
+ *
+ * return (
+ *   <CalendarScreen
+ * />
+ * )
+ */
 const CalendarScreen = () => {
   return (
     <CalendarContainerTag>

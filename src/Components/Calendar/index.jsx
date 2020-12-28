@@ -90,6 +90,9 @@ const Calendar = () => {
     setSelectedMonth(1);
   };
 
+  /**
+   * to render short week names 
+   */
   const renderWeekdaysName = moment
     .weekdaysShort()
     .map((day) => <li key={day}>{day}</li>);
