@@ -29,7 +29,7 @@ export const DaysUlTag = styled.ul`
     display: inline-block;
     width: 13.6%;
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #777;
   }
   .active {

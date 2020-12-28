@@ -23,7 +23,7 @@ export const DescriptionContainerTag = styled.div`
   overflow: auto;
 `;
 export const DescriptionPTag = styled.p`
-  font-size: 20px;
+  font-size: 2rem;
   word-wrap: break-word;
   width: 100%;
   height: 100px;

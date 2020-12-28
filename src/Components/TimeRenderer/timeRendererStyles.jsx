@@ -8,7 +8,7 @@ export const TimeRendererContainer = styled.div`
 `;
 export const TimeBoxTag = styled.span`
   color: white;
-  font-size: 40px;
+  font-size: 3rem;
   background-color: ${OCEAN_BLUE_COLOR};
   border-radius: 6px;
   padding: 8px;
@@ -20,6 +20,6 @@ export const TimeTypeTag = styled.div`
   display: block;
   margin: auto;
   text-align: center;
-  font-size: 20px;
+  font-size: 2rem;
   color: ${OCEAN_BLUE_COLOR};
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CalendarTitleTag = styled.span`
-  font-size: 30px;
+  font-size: 3rem;
   color: #9e9e9e;
   padding: 35px;
 `;

@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { BLOODY_RED_COLOR } from "../../Styles/globalStyles";
 
 export const DateTitleTag = styled.span`
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
 `;
 
 export const TodayTitleTag = styled.span`
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
   color: ${BLOODY_RED_COLOR};
 `;

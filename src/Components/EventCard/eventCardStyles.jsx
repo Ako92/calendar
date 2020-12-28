@@ -13,7 +13,7 @@ export const EventCardContainerTag = styled.div`
 `;
 
 export const EventCardTitleTag = styled.span`
-  font-size: 20px;
+  font-size: 2rem;
   color: ${LIGHT_GRAY_COLOR};
 `;
 

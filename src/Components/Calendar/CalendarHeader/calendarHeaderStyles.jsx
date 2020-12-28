@@ -11,7 +11,7 @@ export const MonthDivTag = styled.div`
     padding: 0;
     li {
       color: #6f5b54;
-      font-size: 20px;
+      font-size: 2rem;
       text-transform: uppercase;
       list-style-type: none;
     }

@@ -7,9 +7,9 @@ export const InputTag = styled.input`
   padding: 10px 0;
   margin: 15px 0;
   color: ${LIGHT_GRAY_COLOR};
-  font-size: 20px;
+  font-size: 2rem;
   ::placeholder {
     color: ${LIGHT_GRAY_COLOR};
-    font-size: 20px;
+    font-size: 2rem;
   }
 `;

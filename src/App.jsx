@@ -1,4 +1,4 @@
-import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AppContainer } from "./Styles/appStyles";
 import GlobalStyles from "./Styles/globalStyles";
