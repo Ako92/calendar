@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="AddEventScreen"><span class="type-signature"></span>AddEventScreen<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>On click on add event button this screen will show.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Screens_AddEventScreen_index.jsx.html">Screens/AddEventScreen/index.jsx</a>, <a href="Screens_AddEventScreen_index.jsx.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const InitialValues={
+    currentDate: new Date(),
+    time: '10 am',
+    title: "Daily meeting",
+    description: "Don't Forget to mention yu works",
+  }return (  &lt;AddEventScreen InitialValues={InitialValues} OnSubmit={()=>{// submit logic should go here}} OnCancel={()=>{// to cancel to event.}}/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Button"><span class="type-signature"></span>Button<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Button component
+this will use to render Button</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Button_index.jsx.html">Components/Button/index.jsx</a>, <a href="Components_Button_index.jsx.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const  Variant = "blue", Text = "my button", Action = () => { //button action should handle here }return (  &lt;Button     Variant={Variant}     Color={Color}     Text={Text}     Action={Action} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Calendar"><span class="type-signature"></span>Calendar<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Calendar component</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Calendar_index.jsx.html">Components/Calendar/index.jsx</a>, <a href="Components_Calendar_index.jsx.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>No Props neededreturn (  &lt;Calendar/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="CalendarHeader"><span class="type-signature"></span>CalendarHeader<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Component for render header of calendar.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Calendar_CalendarHeader_index.jsx.html">Components/Calendar/CalendarHeader/index.jsx</a>, <a href="Components_Calendar_CalendarHeader_index.jsx.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const goToNextMonth = ()=> // handler function to go to next month in calendar componentconst goToPrevMonth = ()=> // handler function to go to prev month in calendar componentconst selectedMonth = 0 // this will be januaryconst selectedYear = 2020return (  &lt;CalendarHeader GoToNextMonth={goToNextMonth} GoToPrevMonth={goToPrevMonth} SelectedMonth={selectedMonth} SelectedYear={selectedYear} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="CategorizedEventMapper"><span class="type-signature"></span>CategorizedEventMapper<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>To Render events in Events tab
+this component will sort and categorize events by date</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_EventMappers_CategorizedEventMapper.jsx.html">Components/EventMappers/CategorizedEventMapper.jsx</a>, <a href="Components_EventMappers_CategorizedEventMapper.jsx.html#line36">line 36</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;CategorizedEventMapper     ItemsToRender={[{         description: "123123",         id: 1609004507508,         time: "12333",         title: "ALI"     }]}     OnEdit={()=> // on edit function}     OnDelete={()=> // on edit function}     OnEventClick{()=> // on event click function} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="DayRenderer"><span class="type-signature"></span>DayRenderer<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>DayRenderer component
+this will use to render day spots in calendar components</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Calendar_DayRenderer_index.jsx.html">Components/Calendar/DayRenderer/index.jsx</a>, <a href="Components_Calendar_DayRenderer_index.jsx.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;DayRenderer   CurrentDaySpot={item}   SelectedDay={selectedDay}   SetSelectedDay={setSelectedDay}   SetShowModal={setShowModal} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="EventCard"><span class="type-signature"></span>EventCard<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Event Card
+This will use to render cards in event lists.
+Dumb Component</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_EventCard_index.jsx.html">Components/EventCard/index.jsx</a>, <a href="Components_EventCard_index.jsx.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;EventCard     Title="Example Title"     OnEdit={()=> handler of edit in card }     OnDelete{()=> handler of delete in card } />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="EventDetail"><span class="type-signature"></span>EventDetail<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Event Detail:
+Will use to render detail screen of event</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_EventDetail_index.jsx.html">Components/EventDetail/index.jsx</a>, <a href="Components_EventDetail_index.jsx.html#line32">line 32</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;EventDetail     Event={{         description: "123123",         id: 1609004507508,         time: "12333",         title: "ALI"     }}     OnEdit={()=> // on edit function}     OnDelete={()=> // on edit function}/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="EventListRenderer"><span class="type-signature"></span>EventListRenderer<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Event List
+This will use to render list of event cards.
+also it will handle edit and delete of content
+and it will render event detail screen as well.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_EventListRenderer_index.jsx.html">Components/EventListRenderer/index.jsx</a>, <a href="Components_EventListRenderer_index.jsx.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;EventListRenderer     ItemsToRender={[{         description: "123123",         id: 1609004507508,         time: "12333",         title: "ALI"     }]}     IsCategorizedByDate={false}/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Events"><span class="type-signature"></span>Events<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Component for render events tab
+this will get all of events from redux and render them categorized and sorted by date.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Screens_EventsScreen_index.jsx.html">Screens/EventsScreen/index.jsx</a>, <a href="Screens_EventsScreen_index.jsx.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;Events/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Input"><span class="type-signature"></span>Input<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Simple Input component</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Input_index.jsx.html">Components/Input/index.jsx</a>, <a href="Components_Input_index.jsx.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;Input  Placeholder= ""      OnChange={ () => {}}      OnBlur{ () => {}} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ModalEvents"><span class="type-signature"></span>ModalEvents<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Modal Events
+Will use to get this day events from reducer and render them
+If there's no event it should shows add new event content</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_ModalEvents_index.jsx.html">Components/ModalEvents/index.jsx</a>, <a href="Components_ModalEvents_index.jsx.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;ModalEvents CurrentDate={new Date()} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="SimpleEventMapper"><span class="type-signature"></span>SimpleEventMapper<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Component for render events without any categorization
+This will use to render list of event cards.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_EventMappers_SimpleEventMapper.jsx.html">Components/EventMappers/SimpleEventMapper.jsx</a>, <a href="Components_EventMappers_SimpleEventMapper.jsx.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;SimpleEventMapper     ItemsToRender={[{         description: "123123",         id: 1609004507508,         time: "12333",         title: "ALI"     }]}     OnEdit={()=> // on edit function}     OnDelete={()=> // on edit function}     OnEventClick{()=> // on event click function}/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="TextArea"><span class="type-signature"></span>TextArea<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Text Area component</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_TextArea_index.jsx.html">Components/TextArea/index.jsx</a>, <a href="Components_TextArea_index.jsx.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;TextArea  Placeholder= ""      OnChange={ () => {}}      OnBlur{ () => {}} />)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="TimeRenderer"><span class="type-signature"></span>TimeRenderer<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>TimeRenderer:
+Will use to render time boxes for upcoming event.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_TimeRenderer_index.jsx.html">Components/TimeRenderer/index.jsx</a>, <a href="Components_TimeRenderer_index.jsx.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;EventDetail     Value={12}     Type={"Hours"}/>)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Toast"><span class="type-signature"></span>Toast<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Toast to render under calendar component
+There's a design issue in this component,
+and that is there's no design for more than one events for today;
+because of that i decided to render just one of them,</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Components_Toast_index.jsx.html">Components/Toast/index.jsx</a>, <a href="Components_Toast_index.jsx.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>return (  &lt;Toast />)</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddEventScreen">AddEventScreen</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Calendar">Calendar</a></li><li><a href="global.html#CalendarHeader">CalendarHeader</a></li><li><a href="global.html#CategorizedEventMapper">CategorizedEventMapper</a></li><li><a href="global.html#DayRenderer">DayRenderer</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventDetail">EventDetail</a></li><li><a href="global.html#EventListRenderer">EventListRenderer</a></li><li><a href="global.html#Events">Events</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#ModalEvents">ModalEvents</a></li><li><a href="global.html#SimpleEventMapper">SimpleEventMapper</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#TimeRenderer">TimeRenderer</a></li><li><a href="global.html#Toast">Toast</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Dec 28 2020 21:05:44 GMT+0330 (Iran Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
