@@ -1,16 +1,33 @@
 import styled, { createGlobalStyle } from "styled-components";
+import MyriadArabicRegular from "./fonts/MyriadArabic/MyriadArabic-Regular.woff";
+import MyriadArabicBold from "./fonts/MyriadArabic/MyriadArabic-Bold.woff";
 
 export const OCEAN_BLUE_COLOR = "#00aeef";
 export const LIGHT_GRAY_COLOR = "#a3a3a3";
 export const BLOODY_RED_COLOR = "#d95141";
 export const TOAST_ORANGE_COLOR = "#f5a647";
+
 const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: 'MyriadArabic-Bold';
+        src: local('MyriadArabic-Bold'),
+        url(${MyriadArabicBold}) format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'MyriadArabic';
+        src: local('MyriadArabic'),
+        url(${MyriadArabicRegular}) format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
   html{
     height: 100%;
   }
 
   body {    
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    font-family: MyriadArabic, Helvetica, Sans-Serif;
     background-color: #ededed;
     min-height: 100%;
     height:100%
@@ -20,13 +37,13 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
   .tabs{
-    padding: 10px 0 0;
-    height: 60px;
+    
+    max-height: 55px;
     background-color:#fff;
     .nav-item{ 
       color: ${BLOODY_RED_COLOR};
-      font-size:20px;
-
+      font-size:2rem;
+      height:55px;
     
     &.active{
       border-width:0 0 4px 0 ;
@@ -49,7 +66,8 @@ const GlobalStyles = createGlobalStyle`
     border: none;
   }
   .modal-title{
-    color:${LIGHT_GRAY_COLOR}
+    color:${LIGHT_GRAY_COLOR};
+    font-size:2rem;
   }
   .modal-content{
     height:80vh;
@@ -60,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
   }
   .close{
     font-weight: 400;
-    font-size:40px;
+    font-size:2rem;
     color:rgba(136, 136, 136, 0.8)
   }
   textarea:focus, input:focus,button:focus{
@@ -94,5 +112,5 @@ export const CircularScreenContainerTag = styled.span`
 export const CircularScreenDescriptionTag = styled.span`
   margin-top: 20px;
   color: ${LIGHT_GRAY_COLOR};
-  font-size: 24px;
+  font-size: 2.5rem;
 `;
