@@ -20,5 +20,5 @@ export const PlusCharTag = styled.span`
 
 export const AddNewItemSpanTag = styled.span`
   align-self: center;
-  font-size: 12rem;
+  font-size: 8rem;
 `;
