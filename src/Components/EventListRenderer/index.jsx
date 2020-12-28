@@ -104,7 +104,7 @@ const EventListRenderer = (props) => {
   );
   const DeleteItemModalContent = (
     <CircularScreenContainerTag>
-      <CircularButtonTag TallContent={true}>
+      <CircularButtonTag>
         <DeleteEventImgTag src="/icons/delete.png" alt="delete event" />
       </CircularButtonTag>
       <CircularScreenDescriptionTag>Are you sure?</CircularScreenDescriptionTag>

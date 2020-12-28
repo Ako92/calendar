@@ -17,3 +17,8 @@ export const PlusCharTag = styled.span`
     content: "+";
   }
 `;
+
+export const AddNewItemSpanTag = styled.span`
+  align-self: center;
+  font-size: 120px;
+`;

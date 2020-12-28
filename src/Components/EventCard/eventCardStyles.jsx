@@ -30,5 +30,5 @@ export const EventCardImgTag = styled.img`
 `;
 
 export const DeleteEventImgTag = styled.img`
-  padding-bottom: 10px;
+  width: 50%;
 `;

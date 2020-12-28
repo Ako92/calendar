@@ -10,7 +10,7 @@ import {
   CircularScreenDescriptionTag,
 } from "../../Styles/globalStyles";
 import EventListRenderer from "../EventListRenderer";
-import { AddNewItemContainerTag, PlusCharTag } from "./modalEventsStyles";
+import { AddNewItemContainerTag, AddNewItemSpanTag, PlusCharTag } from "./modalEventsStyles";
 const ADD_EVENT = "Add Event";
 /**
  * Modal Events
@@ -90,9 +90,11 @@ const ModalEvents = (props) => {
               setAddNewEvent(true);
             }}
           >
-            +
+            <AddNewItemSpanTag>+</AddNewItemSpanTag>
           </CircularButtonTag>
-          <CircularScreenDescriptionTag>{ADD_EVENT}</CircularScreenDescriptionTag>
+          <CircularScreenDescriptionTag>
+            {ADD_EVENT}
+          </CircularScreenDescriptionTag>
         </CircularScreenContainerTag>
       );
     }

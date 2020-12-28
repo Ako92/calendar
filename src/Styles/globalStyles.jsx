@@ -70,8 +70,11 @@ const GlobalStyles = createGlobalStyle`
 export default GlobalStyles;
 
 export const CircularButtonTag = styled.button`
-  font-size: 120px;
-  padding: ${(props) => (props.TallContent ? "0px 70px" : "0px 50px")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
   border: 2px solid ${LIGHT_GRAY_COLOR};
   border-radius: 50%;
   color: ${LIGHT_GRAY_COLOR};
@@ -91,5 +94,5 @@ export const CircularScreenContainerTag = styled.span`
 export const CircularScreenDescriptionTag = styled.span`
   margin-top: 20px;
   color: ${LIGHT_GRAY_COLOR};
-  font-size: 20px;
+  font-size: 24px;
 `;
