@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Screens/EventsScreen/index.jsx</title>
+    <title>JSDoc: Source: Screens/Home/index.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Screens/EventsScreen/index.jsx</h1>
+    <h1 class="page-title">Source: Screens/Home/index.jsx</h1>
 
     
 
@@ -27,31 +27,39 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from "react";
-import { shallowEqual, useSelector } from "react-redux";
-import EventListRenderer from "../../Components/EventListRenderer";
+import TabGenerator from "../../Components/TabGenerator/TabGenerator";
+import CalendarScreen from "../CalendarScreen";
+import Events from "../EventsScreen";
+const CALENDAR_TITLE = "Calendar";
+const EVENTS_TITLE = "Events";
 
 /**
- * Component for render events tab
- *  this will get all of events from redux and render them categorized and sorted by date.
+ * Home page of app After splash screen this Screen will render
+ *
  * @component
  * @example
  *
  * return (
- *   &lt;Events
+ *   &lt;Home
  * />
  * )
  */
-const Events = () => {
-  const { events } = useSelector(
-    (state) => ({
-      events: state?.eventsReducer?.events,
-    }),
-    shallowEqual
-  );
-
-  return &lt;EventListRenderer ItemsToRender={events} IsCategorizedByDate={true}/>;
+const Home = () => {
+  const tabData = [
+    {
+      title: CALENDAR_TITLE,
+      extraClassName: "",
+      Component: CalendarScreen,
+    },
+    {
+      title: EVENTS_TITLE,
+      extraClassName: "",
+      Component: Events,
+    },
+  ];
+  return &lt;TabGenerator TabsContent={tabData} />;
 };
-export default Events;
+export default Home;
 </code></pre>
         </article>
     </section>

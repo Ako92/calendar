@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Screens/EventsScreen/index.jsx</title>
+    <title>JSDoc: Source: Components/Modal/index.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Screens/EventsScreen/index.jsx</h1>
+    <h1 class="page-title">Source: Components/Modal/index.jsx</h1>
 
     
 
@@ -27,31 +27,81 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from "react";
-import { shallowEqual, useSelector } from "react-redux";
-import EventListRenderer from "../../Components/EventListRenderer";
-
+import PropTypes from "prop-types";
+import { Modal } from "react-bootstrap";
+import Button from "../Button";
 /**
- * Component for render events tab
- *  this will get all of events from redux and render them categorized and sorted by date.
+ * Component that has duty to render modal
  * @component
  * @example
  *
  * return (
- *   &lt;Events
+ *   &lt;ModalRenderer
+ *    IsOpenModal={true}
+ *    HandleCloseModal={()=>{ // onClose handler of modal }}
+ *    ModalProps={{
+ *        Title: "Title",
+ *        Content: ReactComponent,
+ *        Footer: [{
+ *          action: ()=>{ // button action },
+ *          variant: "blue"
+ *          text: "Button Text",
+ *        }
+ *      ]
+ *    }
  * />
  * )
  */
-const Events = () => {
-  const { events } = useSelector(
-    (state) => ({
-      events: state?.eventsReducer?.events,
-    }),
-    shallowEqual
-  );
+const ModalRenderer = (props) => {
+  const { IsOpenModal, HandleCloseModal, ModalProps } = props;
 
-  return &lt;EventListRenderer ItemsToRender={events} IsCategorizedByDate={true}/>;
+  return (
+    &lt;Modal show={IsOpenModal} onHide={HandleCloseModal} centered>
+      &lt;Modal.Header closeButton>
+        &lt;Modal.Title>{ModalProps?.Title}&lt;/Modal.Title>
+      &lt;/Modal.Header>
+
+      &lt;Modal.Body> {ModalProps.Content} &lt;/Modal.Body>
+      {ModalProps?.Footer &amp;&amp; (
+        &lt;Modal.Footer>
+          {ModalProps?.Footer?.map((item) => (
+            &lt;Button
+              key={item.text}
+              Action={item?.action}
+              Variant={item?.variant}
+              Text={item?.text}
+            />
+          ))}
+        &lt;/Modal.Footer>
+      )}
+    &lt;/Modal>
+  );
 };
-export default Events;
+export default ModalRenderer;
+ModalRenderer.propTypes = {
+  IsOpenModal: PropTypes.bool.isRequired,
+  HandleCloseModal: PropTypes.func.isRequired,
+  ModalProps: PropTypes.shape({
+    /**
+     * modal title
+     */
+    Title: PropTypes.string,
+    /**
+     * React Component to render in body of modal
+     */
+    Content: PropTypes.element,
+    /**
+     * array of action buttons to render in footer
+     */
+    Footer: PropTypes.arrayOf(
+      PropTypes.shape({
+        action: PropTypes.func,
+        variant: PropTypes.oneOf(["blue", "white"]),
+        text: PropTypes.string,
+      })
+    ),
+  }).isRequired,
+};
 </code></pre>
         </article>
     </section>

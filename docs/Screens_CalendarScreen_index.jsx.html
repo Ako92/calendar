@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Screens/EventsScreen/index.jsx</title>
+    <title>JSDoc: Source: Screens/CalendarScreen/index.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Screens/EventsScreen/index.jsx</h1>
+    <h1 class="page-title">Source: Screens/CalendarScreen/index.jsx</h1>
 
     
 
@@ -27,31 +27,37 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from "react";
-import { shallowEqual, useSelector } from "react-redux";
-import EventListRenderer from "../../Components/EventListRenderer";
+import Calendar from "../../Components/Calendar";
+import Toast from "../../Components/Toast";
 
+import {
+  CalendarTitleTag,
+  CalendarContainerTag,
+  CalendarRowTag,
+} from "./calendarScreenStyles";
+const PICK_A_DAY = "Pick a day";
 /**
- * Component for render events tab
- *  this will get all of events from redux and render them categorized and sorted by date.
+ * Component to render calendar tab content
  * @component
  * @example
  *
  * return (
- *   &lt;Events
+ *   &lt;CalendarScreen
  * />
  * )
  */
-const Events = () => {
-  const { events } = useSelector(
-    (state) => ({
-      events: state?.eventsReducer?.events,
-    }),
-    shallowEqual
+const CalendarScreen = () => {
+  return (
+    &lt;CalendarContainerTag>
+      &lt;CalendarRowTag>
+        &lt;CalendarTitleTag>{PICK_A_DAY}&lt;/CalendarTitleTag>
+        &lt;Calendar />
+      &lt;/CalendarRowTag>
+      &lt;Toast />
+    &lt;/CalendarContainerTag>
   );
-
-  return &lt;EventListRenderer ItemsToRender={events} IsCategorizedByDate={true}/>;
 };
-export default Events;
+export default CalendarScreen;
 </code></pre>
         </article>
     </section>

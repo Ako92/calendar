@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Screens/EventsScreen/index.jsx</title>
+    <title>JSDoc: Source: Components/TabGenerator/TabGenerator.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Screens/EventsScreen/index.jsx</h1>
+    <h1 class="page-title">Source: Components/TabGenerator/TabGenerator.jsx</h1>
 
     
 
@@ -27,31 +27,63 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from "react";
-import { shallowEqual, useSelector } from "react-redux";
-import EventListRenderer from "../../Components/EventListRenderer";
+import { Tab, Tabs } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 /**
- * Component for render events tab
- *  this will get all of events from redux and render them categorized and sorted by date.
+ * Tab Generator
+ * will render tab based on TabsContent array provided to it.
  * @component
  * @example
  *
  * return (
- *   &lt;Events
+ *   &lt;TabGenerator
+ *      TabsContent={[
+ *        title: "Tab Title",
+ *        extraClassName: "some-class-name",
+ *        Component: SampleReactComponent
+ *       ]}
  * />
  * )
  */
-const Events = () => {
-  const { events } = useSelector(
-    (state) => ({
-      events: state?.eventsReducer?.events,
-    }),
-    shallowEqual
-  );
-
-  return &lt;EventListRenderer ItemsToRender={events} IsCategorizedByDate={true}/>;
+const TabGenerator = (props) => {
+  const { TabsContent } = props;
+  const TabData = TabsContent.map((tab) => {
+    return (
+      &lt;Tab
+        key={tab.title}
+        title={tab.title}
+        eventKey={tab.title}
+        className={`tab-content ${
+          tab.extraClassName ? tab.extraClassName : ""
+        }`}
+      >
+        &lt;tab.Component />
+      &lt;/Tab>
+    );
+  });
+  return &lt;Tabs className="tabs nav-justified">{TabData}&lt;/Tabs>;
 };
-export default Events;
+export default TabGenerator;
+TabGenerator.propTypes = {
+  /** tabs content array to render in generating tabs */
+  TabsContent: PropTypes.arrayOf(
+    PropTypes.shape({
+      /**
+       * tab title
+       */
+      title: PropTypes.string,
+      /**
+       * can pass this className to tab parent
+       */
+      extraClassName: PropTypes.string,
+      /** React Component To Render in Tab Body
+       * the right PropTypes for this is Element
+       * But there was a false warning in browser and because of that i changed it  */
+      Component: PropTypes.func,
+    })
+  ).isRequired,
+};
 </code></pre>
         </article>
     </section>
