@@ -20,7 +20,7 @@ export const TitleContainerTag = styled.div`
 
 export const DescriptionContainerTag = styled.div`
   height: 60%;
-  overflow: scroll;
+  overflow: auto;
 `;
 export const DescriptionPTag = styled.p`
   font-size: 20px;
