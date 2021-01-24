@@ -1,4 +1,4 @@
-# Snapp! Market Calendar
+# Simple Calendar App
 
  Project bootstrapped with Create-react-app
 
